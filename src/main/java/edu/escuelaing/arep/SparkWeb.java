@@ -14,7 +14,16 @@ import static spark.Spark.*;
 public class SparkWeb {
     public static void main(String[] args) {
         port(getPort());
-        get("/hello", (req, res) -> "Hello Heroku");    }
+        get("/hello", (req, res) -> " <form action=\"/&\">\n" +
+"  Ingrese datos para calculo de desviacion: <input type=\"text\" name=\"fname\"><br>\n" +
+"  " +
+"  <input type=\"submit\" value=\"Calcular\">\n" +
+"</form> ");    
+    
+    
+    }
+    
+    
     
     static int getPort() {if (System.getenv("PORT") != null){ 
         return Integer.parseInt(System.getenv("PORT"));        }  
