@@ -18,7 +18,7 @@ public class SparkWeb {
 "  Ingrese datos para calculo de desviacion: <input type=\"text\" name=\"fname\"><br>\n" +
 "  " +
 "  <input type=\"submit\" value=\"Calcular\">\n" +
-"</form> ");    
+"</form> <br> "+ req.queryParams("fname"));    
     
     
     }
