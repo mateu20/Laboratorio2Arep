@@ -66,7 +66,7 @@ public class SparkWeb {
                 + "<p> Los resultados para la desviacion estandar y la media son</p>\n"
                 + "<p>El resultado de la desviacion es:"+media+"</p>\n"
                 + "<p>El resultado de la desviacion es:"+desviacion+"</p>\n"                
-                
+                    
                 + "</body>\n"
                 + "</html>\n";
         return pageContent;
