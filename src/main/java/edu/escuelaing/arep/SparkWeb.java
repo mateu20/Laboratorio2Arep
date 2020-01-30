@@ -32,7 +32,7 @@ public class SparkWeb {
                 +"</head>\n"
                 + "<body>\n"
                 + "<h2>EstadisticasDesviacionYMedia</h2>\n"
-                + "<form method=\"post\" action=\"/calcular\">\n"
+                + "<form action=\"/calcular\">\n"
                 + "  Ingrese Datos:<br>\n"
                 + "  <input type=\"text\" name=\"Ingrese datos separados por espacios\">\n"
                 + "  <br>\n"
