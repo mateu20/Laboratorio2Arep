@@ -16,8 +16,8 @@ import static spark.Spark.*;
 public class SparkWeb {
   public static void main(String[] args) {
         port(getPort());
-        get("/inputdata", (req, res) -> inputDataPage(req, res));
-        get("/Calcular", (req, res) -> CalcularPage(req, res));
+        get("/", (req, res) -> inputDataPage(req, res));
+        get("/calcular", (req, res) -> CalcularPage(req, res));
     }
 
     private static String inputDataPage(Request req, Response res) {
@@ -28,17 +28,13 @@ public class SparkWeb {
                     "<title> EstadisticasDesviacionYMedia</title>"
                 +"</head>\n"
                 + "<body>\n"
-                + "<h2>HTML Forms</h2>\n"
-                + "<form action=\"/results\">\n"
-                + "  First name:<br>\n"
-                + "  <input type=\"text\" name=\"firstname\" value=\"Mickey\">\n"
+                + "<h2>EstadisticasDesviacionYMedia</h2>\n"
+                + "<form method=\"post\" action=\"/calcular\">\n"
+                + "  Ingrese Datos:<br>\n"
+                + "  <input type=\"text\" name=\"Ingrese datos separados por espacio\">\n"
                 + "  <br>\n"
-                + "  Last name:<br>\n"
-                + "  <input type=\"text\" name=\"lastname\" value=\"Mouse\">\n"
-                + "  <br><br>\n"
-                + "  <input type=\"submit\" value=\"Submit\">\n"
+                + "  <input type=\"submit\" value=\"clacular\">\n"
                 + "</form>\n"
-                + "<p>If you click the \"Submit\" button, the form-data will be sent to a page called \"/results\".</p>\n"
                 + "</body>\n"
                 + "</html>\n";
         return pageContent;
