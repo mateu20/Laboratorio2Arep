@@ -63,13 +63,9 @@ public class SparkWeb {
                 +"</head>\n"
                 + "<body>\n"
                 + "<h2>ResultadoDesviacionYMedia</h2>\n"
-                + "<p> Los resultados para la desviacion estandar y la media son</p>/n"
+                + "<p> Los resultados para la desviacion estandar y la media son</p>\n"
                 + "<p>El resultado de la desviacion es:"+media+"</p>\n"
-                + "<p>El resultado de la desviacion es:"+desviacion+"</p>\n"
-                + "  Ingrese Datos:<br>\n"
-                + "  <input type=\"text\" name=\"Ingrese datos separados por espacios\">\n"
-                + "  <br>\n"
-                + "  <input type=\"submit\" value=\"calcular\">\n"
+                + "<p>El resultado de la desviacion es:"+desviacion+"</p>\n"                
                 
                 + "</body>\n"
                 + "</html>\n";
