@@ -14,45 +14,52 @@ import static spark.Spark.*;
 
 import static spark.Spark.*;
 public class SparkWeb {
-    public static void main(String[] args) {
+  public static void main(String[] args) {
         port(getPort());
-        get("/hello", (req, res) -> " <form action=\"/&\">\n" +
-"  Ingrese datos para calculo de desviacion: <input type=\"text\" name=\"fname\"><br>\n" +
-"  " +
-"  <input type=\"submit\" value=\"Calcular\">\n" +
-"</form> <br> "+ req.queryParams("fname"));    
-    
-    
+        get("/inputdata", (req, res) -> inputDataPage(req, res));
+        get("/Calcular", (req, res) -> CalcularPage(req, res));
     }
-     private static String inputDataPage(Request req, Response res) {
+
+    private static String inputDataPage(Request req, Response res) {
         String pageContent
                 = "<!DOCTYPE html>"
-                + "<html>"
-                + "<body>"
-                + "<h2>HTML Forms</h2>"
-                + "<form action=\"/results\">"
-                + "  First name:<br>"
-                + "  <input type=\"text\" name=\"firstname\" value=\"Mickey\">"
-                + "  <br>"
-                + "  Last name:<br>"
-                + "  <input type=\"text\" name=\"lastname\" value=\"Mouse\">"
-                + "  <br><br>"
-                + "  <input type=\"submit\" value=\"Submit\">"
-                + "</form>"
-                + "<p>If you click the \"Submit\" button, the form-data will be sent to a page called \"/results\".</p>"
-                + "</body>"
-                + "</html>";
+                + "<html>\n"
+                +"<head>\n" +
+                    "<title> EstadisticasDesviacionYMedia</title>"
+                +"</head>\n"
+                + "<body>\n"
+                + "<h2>HTML Forms</h2>\n"
+                + "<form action=\"/results\">\n"
+                + "  First name:<br>\n"
+                + "  <input type=\"text\" name=\"firstname\" value=\"Mickey\">\n"
+                + "  <br>\n"
+                + "  Last name:<br>\n"
+                + "  <input type=\"text\" name=\"lastname\" value=\"Mouse\">\n"
+                + "  <br><br>\n"
+                + "  <input type=\"submit\" value=\"Submit\">\n"
+                + "</form>\n"
+                + "<p>If you click the \"Submit\" button, the form-data will be sent to a page called \"/results\".</p>\n"
+                + "</body>\n"
+                + "</html>\n";
         return pageContent;
     }
 
-    private static String resultsPage(Request req, Response res) {
+    private static String CalcularPage(Request req, Response res) {
         return req.queryParams("firstname") + " " +
                 req.queryParams("lastname");
     }
-    
-    
-    static int getPort() {if (System.getenv("PORT") != null){ 
-        return Integer.parseInt(System.getenv("PORT"));        }  
-    return 4567;
-    } //returns default port if heroku-port isn't set(i.e. on localhost)    }}
+
+    /**
+     * This method reads the default port as specified by the PORT variable in
+     * the environment.
+     *
+     * Heroku provides the port automatically so you need this to run the
+     * project on Heroku.
+     */
+    static int getPort() {
+        if (System.getenv("PORT") != null) {
+            return Integer.parseInt(System.getenv("PORT"));
+        }
+        return 4567; //returns default port if heroku-port isn't set (i.e. on localhost)
+    }//returns default port if heroku-port isn't set(i.e. on localhost)    }}
 }

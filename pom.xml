@@ -32,6 +32,12 @@
       <scope>test</scope>
       <type>jar</type>
     </dependency>
+    <dependency>
+      <groupId>org.decimal4j</groupId>
+      <artifactId>decimal4j</artifactId>
+      <version>1.0.3</version>
+      <type>jar</type>
+    </dependency>
   </dependencies>
   <build>  
       <plugins>            
