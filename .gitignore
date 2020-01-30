@@ -15,3 +15,4 @@
 # virtual machine crash logs, seehttp://www.java.com/en/download/help/error_hotspot.xmlhs_err_pid*
 # Ignora todos los archivos en el directorio target en losproyectos creados con maventarget/
 # Ignora archivo .DS_Store en Mac.DS_Store
+/nbproject/

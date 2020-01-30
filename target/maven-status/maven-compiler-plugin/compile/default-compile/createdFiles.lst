@@ -1,2 +1,6 @@
 edu\escuelaing\arep\SparkWeb.class
 edu\escuelaing\arep\App.class
+edu\escuelaing\arep\LinkedList\LinkedList$1.class
+edu\escuelaing\arep\LinkedList\Nodo.class
+edu\escuelaing\arep\Estadisticas\Estadisticas.class
+edu\escuelaing\arep\LinkedList\LinkedList.class
