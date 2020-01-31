@@ -55,7 +55,11 @@ public class LinkedList<T> implements List<T> {
         size++;
         return true;
     }
-    
+    /**
+     * 
+     * @param i recive un elemento de tipo int que debe ser removido
+     * @return la LinkedList sin el elemento
+     */
     public T remove(int i) {
         if (i<0||i>=size) {
             throw new IndexOutOfBoundsException();
@@ -75,6 +79,12 @@ public class LinkedList<T> implements List<T> {
         size--;
         return removeNodo.getData();
     }
+    /**
+     * 
+     * @return los nodos que estan en la posiciones posteriores de
+     * un index especifico
+     */
+    
     public Iterator<T> iterator() {
         return new Iterator<T>() {
 
@@ -92,7 +102,11 @@ public class LinkedList<T> implements List<T> {
         };
     }
 
-
+    /**
+     * 
+     * @param i recibe el entero sobre el que buscamos trabajar 
+     * @return el entero de nuestra LinkedList
+     */
     public T get(int i) {
         if (i < 0 || i >= size) {
             throw new IndexOutOfBoundsException();

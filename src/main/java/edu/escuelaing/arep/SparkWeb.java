@@ -22,7 +22,12 @@ public class SparkWeb {
         get("/", (req, res) -> inputDataPage(req, res));
         get("/calcular", (req, res) -> CalcularPage(req, res));
     }
-
+    /**
+     * 
+     * @param req Pide informacion respecto a los requisitos HTML
+     * @param res Pide informacion respecto a las respuestas HTML
+     * @return el index html de la pagina 
+     */
     private static String inputDataPage(Request req, Response res) {
         String pageContent
                 = "<!DOCTYPE html>"
@@ -33,7 +38,7 @@ public class SparkWeb {
                 + "<body>\n"
                 + "<h2>EstadisticasDesviacionYMedia</h2>\n"
                 + "<form action=\"/calcular\">\n"
-                + "  Ingrese Datos:<br>\n"
+                + "  Ingrese datos separados por un espacio:<br>\n"
                 + "  <input type=\"text\" name=\"Ingrese datos separados por espacios\">\n"
                 + "  <br>\n"
                 + "  <input type=\"submit\" value=\"calcular\">\n"
@@ -42,7 +47,12 @@ public class SparkWeb {
                 + "</html>\n";
         return pageContent;
     }
-
+    /**
+     * 
+     * @param req Pide informacion respecto a los requisitos HTML
+     * @param res Pide informacion respecto a las respuestas HTML
+     * @return el resultado de la desviacion y la media 
+     */
     private static String CalcularPage(Request req, Response res) {
         List<Double> lin = new LinkedList<>();
         String numeros = req.queryParams("Ingrese datos separados por espacios");
