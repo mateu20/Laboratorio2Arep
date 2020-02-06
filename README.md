@@ -68,19 +68,8 @@ Para compilar el proyecto desde maven:
 Para ejecutar el programa desde la linea de comandos ejecutamos nuestro proyecto de la siguiente manera:
 ```
 > mvn clean install
-> heroku local web
->heroku login
->heroku git:remote -a warm-everglades-04140
->git add .
-git commit -m "nombreDelCambio"
->git push origin master
->git push heroku master
 ```
-Y finalmente para abrir la aplicacion utilizamos el comando
-```
->heroku master
-```
-
+[![Heroku](https://camo.githubusercontent.com/be46aee4f8d55e322c3e7db60ea23a4deb5427c9/68747470733a2f2f6865726f6b752d62616467652e6865726f6b756170702e636f6d2f3f6170703d6865726f6b752d6261646765)](warm-everglades-04140)
 
 Ya dentro de nuestra pagina insertaremos una serie de numeros separados por un espacio.
 
